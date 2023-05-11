@@ -1,0 +1,63 @@
+@startuml
+
+package "Ejercicio1" {
+
+interface "ElementFactory" {
+    +crearElementoSimple(): Elemento
+}
+
+abstract class "Elemento" {
+    -precio: double
+    -codigo: String
+    +getPrecio(): double
+    +setPrecio(precio: double): void
+    +getCodigo(): String
+    +setCodigo(codigo: String): void
+    +crear(): void
+}
+
+class "ElementoA" {
+    -precio: double
+    -codigo: String
+    +crear(): void
+}
+
+class "ElementoB" {
+    -precio: double
+    -codigo: String
+    +crear(): void
+}
+
+class "FactoryElementoA" {
+    +crearElementoSimple(): Elemento
+}
+
+class "FactoryElementoB" {
+    +crearElementoSimple(): Elemento
+}
+
+interface "FactoryKit" {
+    +añadirElemento(elemento: Elemento): void
+    +eliminarElemento(elemento: Elemento): void
+    +getPrecio(): double
+}
+
+class "Kit" {
+    -elementos: ArrayList<Elemento>
+    +añadirElemento(elemento: Elemento): void
+    +eliminarElemento(elemento: Elemento): void
+    +getPrecio(): double
+}
+
+ElementFactory <|.. FactoryElementoA
+ElementFactory <|.. FactoryElementoB
+Elemento <|-- ElementoA
+Elemento <|-- ElementoB
+FactoryKit <|.. Kit
+Kit "1" *-- "*" Elemento
+FactoryElementoA ..> ElementoA : creates >
+FactoryElementoB ..> ElementoB : creates >
+
+}
+
+@enduml

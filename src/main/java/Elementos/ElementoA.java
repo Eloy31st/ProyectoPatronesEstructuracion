@@ -1,5 +1,6 @@
 package Elementos;
 
+
 public class ElementoA extends Elemento{
     private double precio;
     private String codigo;
