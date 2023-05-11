@@ -1,17 +1,17 @@
-package Ejercicio1;
+package Elementos;
 
-public class ElementoA extends Elemento{
+public class ElementoB extends Elemento{
     private double precio;
     private String codigo;
 
-    public ElementoA() {
+    public ElementoB() {
         crear();
     }
 
     @Override
     public void crear(){
-        setPrecio(70);
-        setCodigo("AA");
+        setPrecio(25);
+        setCodigo("BB");
     }
 
     @Override
@@ -33,4 +33,5 @@ public class ElementoA extends Elemento{
     public void setCodigo(String codigo) {
         super.setCodigo(codigo);
     }
+
 }

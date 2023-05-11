@@ -1,6 +1,7 @@
-package Ejercicio1;
+package Factories;
 
-import java.util.ArrayList;
+
+import Elementos.Elemento;
 
 public interface FactoryKit {
 

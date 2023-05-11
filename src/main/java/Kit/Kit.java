@@ -1,8 +1,11 @@
-package Ejercicio1;
+package Kit;
+
+import Elementos.Elemento;
+import Factories.FactoryKit;
 
 import java.util.ArrayList;
 
-public class Kit implements FactoryKit{
+public class Kit implements FactoryKit {
     private ArrayList<Elemento> elementos;
 
     public Kit(){

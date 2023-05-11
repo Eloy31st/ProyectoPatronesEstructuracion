@@ -1,4 +1,11 @@
-package Ejercicio1;
+package App;
+
+import Elementos.Elemento;
+import Factories.ElementFactory;
+import Factories.FactoryElementoA;
+import Factories.FactoryElementoB;
+import Kit.Kit;
+
 public class main{
     public static void prueba(){
         ElementFactory factoryA = new FactoryElementoA();

@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Elementos;
 
 public abstract class Elemento {
     double precio;

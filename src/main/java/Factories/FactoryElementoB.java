@@ -1,4 +1,7 @@
-package Ejercicio1;
+package Factories;
+
+import Elementos.Elemento;
+import Elementos.ElementoB;
 
 public class FactoryElementoB implements ElementFactory{
     public Elemento crearElementoSimple(){
